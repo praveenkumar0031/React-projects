@@ -6,5 +6,5 @@ export const geoApiOtps = {
 	}
 };
 
-export const geoApiUrl = 'https://wft-geo-db.p.rapidapi.com/v1/geo/cities';
+export const geoApiUrl = 'https://wft-geo-db.p.rapidapi.com/v1/geo';
 
