@@ -1,20 +1,49 @@
-import './Current.css';
+import React from "react";
+import "./Current.css";
 
-const CurrentWeather=()=>{
-return (
-    <div className='crt-weather-card'>
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css"></link>
+const CurrentWeather = ({ data }) => {
 
-        <div className='crt-box'>
-            <p className='crt-city'>current weather</p>
-            <i className='wi wi-solar-eclipse icon'></i>
-            <p className='crt-weather'>45 'C</p>
-        <p className='crt-time'>12:00 am</p>
-        
+    return (
+        <div className="weather">
+            <div className="top">
+                <div>
+                    <p className="city">{data.city}</p>
+                    <p className="weather-description">{data.weather[0].description}</p>
+                </div>
+                <img
+                    alt="weather"
+                    className="weather-icon"
+                    src={`/icons/${data.weather[0].icon}.png`}
+                />
+            </div>
+            <div className="bottom">
+                <p className="temperature">{Math.round(data.main.temp)}°C</p>
+                <div className="details">
+                    <div className="parameter-row">
+                        <span className="parameter-label">Details</span>
+                    </div>
+                    <div className="parameter-row">
+                        <span className="parameter-label">Feels like</span>
+                        <span className="parameter-value">
+                            {Math.round(data.main.feels_like)}°C
+                        </span>
+                    </div>
+                    <div className="parameter-row">
+                        <span className="parameter-label">Wind</span>
+                        <span className="parameter-value">{data.wind.speed} m/s</span>
+                    </div>
+                    <div className="parameter-row">
+                        <span className="parameter-label">Humidity</span>
+                        <span className="parameter-value">{data.main.humidity}%</span>
+                    </div>
+                    <div className="parameter-row">
+                        <span className="parameter-label">Pressure</span>
+                        <span className="parameter-value">{data.main.pressure} hPa</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    );
+};
 
-    </div>
-);
-}
 export default CurrentWeather;
