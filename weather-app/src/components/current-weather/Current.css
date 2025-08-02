@@ -75,51 +75,56 @@
         position: relative;
         height: 250px;
     }
-    .city{
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 1;
-    margin: 2;
-    letter-spacing: 1px;
+
+    .city {
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 1;
+        margin: 2;
+        letter-spacing: 1px;
     }
-    .weather-description{
+
+    .weather-description {
         font-weight: 400;
-    font-size: 20px;
-    line-height: 1;
-    margin: 0;
+        font-size: 20px;
+        line-height: 1;
+        margin: 0;
     }
+
     .details {
-    width: 100%;
-    margin-left: 20px;
-    margin-top: 25px;
-    padding: 2px 5px 2px 5px;
-   
-}
-.temperature {
-    font-weight: 600;
-    font-size: 60px;
-    width: auto;
-    letter-spacing: -5px;
-    margin: 10px 0;
-}
-.parameter-row {
-    display: flex;
-    justify-content: space-between;
-}
+        width: 100%;
+        margin-left: 20px;
+        margin-top: 25px;
+        padding: 2px 5px 2px 5px;
 
-.parameter-label {
-    text-align: left;
-    font-weight: 400;
-    font-size: 18px;
-}
+    }
 
-.parameter-value {
-    text-align: right;
-    font-weight: 600;
-    font-size: 18px;
-}
+    .temperature {
+        font-weight: 600;
+        font-size: 60px;
+        width: auto;
+        letter-spacing: -5px;
+        margin: 10px 0;
+    }
 
-.parameter-label.top {
-    border-bottom: 2px solid #fff;
-}
+    .parameter-row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .parameter-label {
+        text-align: left;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    .parameter-value {
+        text-align: right;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .parameter-label.top {
+        border-bottom: 2px solid #fff;
+    }
 }
