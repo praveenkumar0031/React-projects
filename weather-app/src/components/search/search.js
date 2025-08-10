@@ -1,3 +1,4 @@
+import "./search.css";
 import { useState } from "react";
 import { AsyncPaginate } from "react-select-async-paginate"
 import { geo_Api_Url, geoApiOtps } from "../../api"
@@ -21,6 +22,7 @@ const Search = ({ onSearchChange }) => {
                     })
                 }
             })
+            
             .catch((e) => console.error(e));
     }
 
@@ -28,15 +30,19 @@ const Search = ({ onSearchChange }) => {
         setSearch(searchData);
         onSearchChange(searchData);
     }
+    
 
     return (
-        <AsyncPaginate
-            placeholder="Search for city"
-            debounceTimeout={900}
-            value={search}
-            onChange={handleOnChange}
-            loadOptions={loadOptions}
-        />
-    )
+        <div className="search-container">
+            <AsyncPaginate
+                placeholder="Search for city"
+                debounceTimeout={900}
+                value={search}
+                onChange={handleOnChange}
+                loadOptions={loadOptions}
+                // No need for classNamePrefix with attribute selectors
+            />
+        </div>
+    );
 }
 export default Search;
